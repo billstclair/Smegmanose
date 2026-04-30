@@ -1,6 +1,6 @@
-# FotoJson.com
+# Smegmanose.org
 
-FotoJson is a photo organizer.
+Smegmanose is a joke.
 
 ## How to set up
 
@@ -19,9 +19,4 @@ directory, then aiming your browser at
 http://localhost:8000/site/index.html. Each time you build, you can
 full-reload the browser tab.
 
-To upload the code to FotoJson.com (if you're me), `bin/update-site`.
-
-See
-[here](https://github.com/billstclair/stonedeyeballs/blob/main/site/index.html)
-for instructions on using the FotoJSON code initialized with different
-photos.
+To upload the code to Smegmanose.org (if you're me), `bin/update-site`.
