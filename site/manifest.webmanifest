@@ -1,8 +1,8 @@
 {
-  "short_name": "FotoJson",
-  "name": "FotoJson",
+  "short_name": "Smegmanose",
+  "name": "Smegmanose",
   "id" : "/",
-  "description": "Photo Organizer",
+  "description": "Web graphics",
   "icons": [
     {
       "src": "/images/icon-192.png",
