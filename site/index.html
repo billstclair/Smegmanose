@@ -1,15 +1,15 @@
 <html>
   <head>
-    <title>FotoJson</title>
+    <title>Smegmanose</title>
     <meta charset="UTF-8">
     <meta name='wot-verification' content='5cb29ec02479d36e6dbc'/> 
     <meta property="og:locale" content="en_US"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:title" content="FotoJson"/>
-    <meta property="og:description" content="FotoJson is a photo organizer."
-    <meta property="og:url" content="https://FotoJson.com/"/>
-    <meta property="og:site_name" content="FotoJson"/>
-    <meta property="og:image" content="https://FotoJson.com/images/icon-512.png"/>
+    <meta property="og:title" content="Smegmanose"/>
+    <meta property="og:description" content="Smegmanose is a for messing with web APIs in Elm."
+    <meta property="og:url" content="https://smegmanose.com/"/>
+    <meta property="og:site_name" content="Smegmanose"/>
+    <meta property="og:image" content="https://smegmanose.com/images/icon-512.png"/>
     <meta property="og:image:width" content="512"/>
     <meta property="og:image:height" content="512"/>
 
@@ -19,26 +19,6 @@
     <!- Your app likely wants this, or something like it. ->
     <link rel='stylesheet' href='css/prettytable.css'>
 
-    <!- Your app should include these three lines, to get the JS code necessary
-     for persistence in LocalStorage, and the Elm code.
-     ->
-
-    <script type='text/javascript' src='js/PortFunnel.js'></script>
-    <script type='text/javascript' src='js/PortFunnel/LocalStorage.js'></script>
-    <script type='text/javascript'>
-      var fotojsonSettings =
-          { title: "Foto JSON", // Page title in browser tab
-            showTitle : false,  // Set to true to display title at top of page.
-            localStoragePrefix: "fotojson",  // unique to your app
-            githubUrl: "https:github.com/billstclair/fotojson", // null to not show
-            copyright: { date: "2024-2026",
-                         url: "https://billstclair.com/",
-                         text: "Bill St. Clair"
-                        }
-          };
-    </script>
-    <script type='text/javascript' src='elm.js'></script>
-
     <!-- Do-nothing worker needed to get some browsers to recognize a webapp. -->
     <script type='text/javascript' src='worker.js'></script>
 
@@ -47,21 +27,35 @@
   </head>
   <body style='margin: auto;'>
     <noscript>
-      <h2 style='text-align: center;'>FotoJson</h2>
+      <h2 style='text-align: center;'>Smegmanose</h2>
       <p style='color: red; text-align: center;'>
-        <b>FotoJson.com requires JavaScript to function. Without JavaScript,
+        <b>Smegmanose.com requires JavaScript to function. Without JavaScript,
           this page is all you will ever see.</b>
       </p>
       <p style='text-align: center;'>
-        <img src='images/icon-512.jpg' width='512' height='512' alt='FotoJson'/>
+        <img src='images/icon-512.jpg' width='512' height='512' alt='Smegmanose'/>
       </p>
       <p style='text-align: center;'>
-        <a href='https://github.com/billstclair/fotojson'>GitHub</a>
+        <a href='https://github.com/billstclair/Smegmanose'>GitHub</a>
       </p>
     </noscript>
-    <!-- This specifies app-specific properties, used by the Elm code.
-         Change it for your app.
-      -->
-    <script type='text/javascript' src='js/run.js'></script>
+    <div margin='10px' width='100%'>
+      <video autoplay="true" width="100%" height="100%" id='videoElement'>
+      </video>
+      <p><a href='https://github.com/billstclair/Smegmanose/'>GitHub</a></p>
+    </div>
+    <script>
+      var video = document.querySelector("#videoElement");
+
+      if (navigator.mediaDevices.getUserMedia) {
+        navigator.mediaDevices.getUserMedia({ video: true })
+          .then(function (stream) {
+            video.srcObject = stream;
+          })
+          .catch(function (err0r) {
+            console.log("Something went wrong!");
+          });
+      }      
+    </script>
   </body>
 </html>
