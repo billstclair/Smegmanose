@@ -2,12 +2,6 @@
 
 Smegmanose is a joke.
 
-## How to set up
-
-You can use it for your own site, by changing `./site/.sshdir` to output an SSH heading for your site, copying `./site/images/index-sample.json` to `index.json`, and editing it to reflect the images you want to initially appear.
-
-The `bin/update-site` to copy the files to your site.
-
 ## Development
 
 To compile the Elm code into JavaScript in `site/elm.js`:
@@ -21,4 +15,5 @@ full-reload the browser tab.
 
 To upload the code to Smegmanose.org (if you're me), `bin/update-site`.
 
-The `rsyncit` script is part of [wws-scripts](https://github.com/billstclair/wws-scripts).
+The `rsyncit` script (called by `update-site`) is part of
+[wws-scripts](https://github.com/billstclair/wws-scripts).
